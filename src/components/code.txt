@@ -1,0 +1,26 @@
+Flowery Joseph
+3:18 PM
+width: 600px;
+    height:1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px 10px rgb(214, 195, 195)
+Flowery Joseph
+4:39 PM
+<ul className="task-list">
+        {tasks.map((task, index) => (
+          <li key={index}>
+            {task}
+            <button onClick={() => handleDeleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
+Flowery Joseph
+4:41 PM
+const handleDeleteTask = (index) => {
+    const newTasks = tasks.filter((_, i) => i !== index);
+    setTasks(newTasks);
+  };
